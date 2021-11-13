@@ -1,53 +1,100 @@
 package com.yize.androidexample;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.MenuItem;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.navigation.NavigationView;
+import com.yize.androidexample.fragment.HomeFragment;
 
 /**
  * @Description: 首页
  * @Author: YiZe
  * @Date: 2021年10月08日   星期五   09:37
  */
-public class MainActivity extends AppCompatActivity {
-    private AppBarConfiguration appBarConfiguration;
-    /**
-     * NavController实例
-     */
-    private NavController mNavController;
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout mDlDrawerLayout;
+    private Fragment mFragment;
+    private HomeFragment mHomeFragment;
+    private FragmentManager mFragmentManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mDlDrawerLayout = findViewById(R.id.dl_drawer_layout);
-        //ToolBar
+        mFragmentManager = getSupportFragmentManager();
+        NavigationView mNvMenuView = findViewById(R.id.nv_menu_view);
+        mNvMenuView.setNavigationItemSelectedListener(this);
+        //ToolBar与ActionBar关联
         Toolbar toolbar = findViewById(R.id.tb_title);
         setSupportActionBar(toolbar);
-        appBarConfiguration = new AppBarConfiguration.Builder(R.id.nav_home).setDrawerLayout(mDlDrawerLayout).build();
-        mNavController = Navigation.findNavController(this, R.id.fr_host_fragment);
-        NavigationView navigationView = findViewById(R.id.nv_menu_view);
-        //将ActionBar与NavController绑定(默认操作栏包含导航支持)
-        NavigationUI.setupActionBarWithNavController(this, mNavController, appBarConfiguration);
-        NavigationUI.setupWithNavController(navigationView, mNavController);
+        ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(
+                this, mDlDrawerLayout, toolbar, 0,
+                0);
+        mDlDrawerLayout.addDrawerListener(actionBarDrawerToggle);
+        actionBarDrawerToggle.syncState();
+        //初始化首页
+        mHomeFragment = HomeFragment.newInstance();
+        mFragment = mHomeFragment;
+        setTitle(getString(R.string.str_home));
+        mFragmentManager.beginTransaction().add(R.id.fl_host_page, mFragment).commit();
     }
 
     /**
-     * ToolBar返回键监听
+     * NavigationView切换监听
+     *
+     * @param item 当前的Item
+     * @return 拦截状态
      */
+    @SuppressLint("NonConstantResourceId")
     @Override
-    public boolean onSupportNavigateUp() {
-        return NavigationUI.navigateUp(mNavController, appBarConfiguration) || super.onSupportNavigateUp();
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.nav_home: {
+                if (mHomeFragment == null) {
+                    mHomeFragment = HomeFragment.newInstance();
+                }
+                setTitle(getString(R.string.str_home));
+                switchContent(mFragment, mHomeFragment);
+            }
+            break;
+            default: {
+            }
+            break;
+        }
+        item.setChecked(true);
+        mDlDrawerLayout.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
+    /**
+     * Fragment切换
+     *
+     * @param fragment1 旧Fragment
+     * @param fragment2 新Fragment
+     */
+    private void switchContent(Fragment fragment1, Fragment fragment2) {
+        if (mFragment != fragment2) {
+            FragmentTransaction ft = mFragmentManager.beginTransaction();
+            ft.hide(fragment1);
+            if (!fragment2.isAdded()) {
+                ft.add(R.id.fl_host_page, fragment2).commit();
+            } else {
+                ft.show(fragment2).commit();
+            }
+            mFragment = fragment2;
+        }
     }
 
     /**
