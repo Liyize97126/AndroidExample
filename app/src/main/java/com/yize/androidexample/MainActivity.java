@@ -16,6 +16,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.navigation.NavigationView;
 import com.yize.androidexample.fragment.HomeFragment;
+import com.yize.androidexample.fragment.IntroductionListFragment;
 
 /**
  * @Description: 首页
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private DrawerLayout mDlDrawerLayout;
     private Fragment mFragment;
     private HomeFragment mHomeFragment;
+    private IntroductionListFragment mTabFirstFragment;
     private FragmentManager mFragmentManager;
 
     @Override
@@ -67,6 +69,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 }
                 setTitle(getString(R.string.str_home));
                 switchContent(mFragment, mHomeFragment);
+            }
+            break;
+            case R.id.nav_tab_first: {
+                if (mTabFirstFragment == null) {
+                    mTabFirstFragment = IntroductionListFragment.newInstance(IntroductionListFragment.TAB_FIRST,0);
+                }
+                setTitle(getString(R.string.str_tab_first));
+                switchContent(mFragment, mTabFirstFragment);
             }
             break;
             default: {

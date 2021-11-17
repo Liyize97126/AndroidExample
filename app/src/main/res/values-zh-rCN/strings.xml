@@ -2,4 +2,6 @@
 <resources>
     <string name="str_home" translatable="false">首页</string>
     <string name="str_welcome" translatable="false">欢迎</string>
+    <string name="str_tab_first" translatable="false">Android 入门</string>
+    <string name="str_chapter_topic" translatable="false">本章主题数：</string>
 </resources>

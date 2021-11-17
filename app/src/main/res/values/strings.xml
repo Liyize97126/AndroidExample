@@ -2,4 +2,6 @@
 <resources>
     <string name="str_home" translatable="false">Home</string>
     <string name="str_welcome" translatable="false">Welcome</string>
+    <string name="str_tab_first" translatable="false">Android Introduction</string>
+    <string name="str_chapter_topic" translatable="false">Topics:</string>
 </resources>
