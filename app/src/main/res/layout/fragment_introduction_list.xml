@@ -49,6 +49,7 @@
             android:id="@+id/rv_introduction_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_10"
             android:overScrollMode="never"
             android:scrollbars="none"
             tools:listitem="@layout/layout_introduction_list_item" />

@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.yize.androidexample.R;
 import com.yize.androidexample.adapter.IntroductionListAdapter;
 import com.yize.tools.base.BaseFragment;
+import com.yize.tools.decoration.SplitLineDecoration;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -63,6 +64,7 @@ public class IntroductionListFragment extends BaseFragment {
         mRvIntroductionList = view.findViewById(R.id.rv_introduction_list);
         mRvIntroductionList.setLayoutManager(new LinearLayoutManager(getContext(),
                 LinearLayoutManager.VERTICAL, false));
+        mRvIntroductionList.addItemDecoration(new SplitLineDecoration(LinearLayoutManager.VERTICAL));
         mIntroductionListAdapter = new IntroductionListAdapter();
         mRvIntroductionList.setAdapter(mIntroductionListAdapter);
         //配置页面数据
