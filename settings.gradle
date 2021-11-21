@@ -1,3 +1,4 @@
+include ':resourcepack01'
 include ':tools'
 include ':app'
 rootProject.name = "AndroidExample"

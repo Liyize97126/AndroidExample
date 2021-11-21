@@ -1,6 +1,7 @@
 package com.yize.androidexample;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -17,6 +18,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.google.android.material.navigation.NavigationView;
 import com.yize.androidexample.fragment.HomeFragment;
 import com.yize.androidexample.fragment.IntroductionListFragment;
+import com.yize.resourcepack01.basiclayout.RelativeLayoutDemoActivity;
 
 /**
  * @Description: 首页
@@ -51,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         mFragment = mHomeFragment;
         setTitle(getString(R.string.str_home));
         mFragmentManager.beginTransaction().add(R.id.fl_host_page, mFragment).commit();
+        testActivity();
     }
 
     /**
@@ -73,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             break;
             case R.id.nav_tab_first: {
                 if (mTabFirstFragment == null) {
-                    mTabFirstFragment = IntroductionListFragment.newInstance(IntroductionListFragment.TAB_FIRST,0);
+                    mTabFirstFragment = IntroductionListFragment.newInstance(IntroductionListFragment.TAB_FIRST, 0);
                 }
                 setTitle(getString(R.string.str_tab_first));
                 switchContent(mFragment, mTabFirstFragment);
@@ -117,5 +120,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else {
             super.onBackPressed();
         }
+    }
+
+    /**
+     * 测试Activity
+     */
+    private void testActivity() {
+        startActivity(new Intent(this, RelativeLayoutDemoActivity.class));
+        finish();
     }
 }

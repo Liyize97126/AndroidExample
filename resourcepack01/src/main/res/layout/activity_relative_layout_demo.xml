@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".basiclayout.RelativeLayoutDemoActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:gravity="center"
+        android:text="@string/str_relative_layout"
+        android:textSize="@dimen/sp_18" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:text="@string/str_relative_layout"
+        android:textSize="@dimen/sp_18" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:text="@string/str_relative_layout"
+        android:textSize="@dimen/sp_18" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:text="@string/str_relative_layout"
+        android:textSize="@dimen/sp_18" />
+
+    <TextView
+        android:id="@+id/tv_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="中间的\n桌子"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/sp_25"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/dp_25"
+        android:layout_marginRight="@dimen/dp_25"
+        android:layout_toStartOf="@id/tv_middle"
+        android:layout_toLeftOf="@id/tv_middle"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="左\n边\n的\n桌\n子"
+        android:textColor="@color/colorRed"
+        android:textSize="@dimen/sp_20"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/dp_25"
+        android:layout_marginLeft="@dimen/dp_25"
+        android:layout_toEndOf="@id/tv_middle"
+        android:layout_toRightOf="@id/tv_middle"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="右\n边\n的\n桌\n子"
+        android:textColor="@color/colorGreen"
+        android:textSize="@dimen/sp_20"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tv_middle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:gravity="center"
+        android:text="上 边 的 桌 子"
+        android:textColor="@color/colorBlue"
+        android:textSize="@dimen/sp_20"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_middle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_5"
+        android:gravity="center"
+        android:text="下 边 的 桌 子"
+        android:textColor="@color/colorPurple"
+        android:textSize="@dimen/sp_20"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>
