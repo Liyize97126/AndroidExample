@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         mFragment = mHomeFragment;
         setTitle(getString(R.string.str_home));
         mFragmentManager.beginTransaction().add(R.id.fl_host_page, mFragment).commit();
-        testActivity();
+        //testActivity();
     }
 
     /**
@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             break;
             case R.id.nav_tab_first: {
                 if (mTabFirstFragment == null) {
-                    mTabFirstFragment = IntroductionListFragment.newInstance(IntroductionListFragment.TAB_FIRST, 0);
+                    mTabFirstFragment = IntroductionListFragment.newInstance(IntroductionListFragment.TAB_FIRST);
                 }
                 setTitle(getString(R.string.str_tab_first));
                 switchContent(mFragment, mTabFirstFragment);

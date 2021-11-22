@@ -1,22 +1,32 @@
 package com.yize.androidexample.fragment;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.IntDef;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.gson.Gson;
 import com.yize.androidexample.R;
 import com.yize.androidexample.adapter.IntroductionListAdapter;
+import com.yize.androidexample.model.IntroductionModel;
 import com.yize.tools.base.BaseFragment;
 import com.yize.tools.decoration.SplitLineDecoration;
+import com.yize.tools.utils.EmptyUtil;
+import com.yize.tools.utils.ReadAssetsFileUtil;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
+import java.util.Objects;
 
 /**
  * @Desc: 通用介绍列表Fragment
@@ -24,21 +34,41 @@ import java.lang.annotation.RetentionPolicy;
  * @Time: 15:14
  * @Author: 李易泽
  */
-public class IntroductionListFragment extends BaseFragment {
+public class IntroductionListFragment extends BaseFragment implements IntroductionListAdapter.IntroductionListCallBack {
     private TextView mTvIntroductionTitle, mTvIntroductionDesc;
     private RecyclerView mRvIntroductionList;
     private IntroductionListAdapter mIntroductionListAdapter;
-    private int mTag, mTopicNum;
+    private int mTag;
+    private AlertDialog mAlertDialog;
+    private Handler mHandler = new Handler(Looper.getMainLooper()) {
+        @SuppressLint("SetTextI18n")
+        @Override
+        public void handleMessage(@NonNull Message msg) {
+            super.handleMessage(msg);
+            if (msg.what == 0) {
+                Message message = Message.obtain();
+                message.what = 1;
+                message.getData().putString("fileName", msg.getData().getString("fileName"));
+                mHandler.sendMessageDelayed(message, 2000);
+                mAlertDialog.show();
+            } else if (msg.what == 1) {
+                IntroductionModel introductionModel = initListData(msg.getData().getString("fileName"));
+                mTvIntroductionDesc.setText(getString(R.string.str_chapter_topic) + introductionModel.getTotal());
+                mIntroductionListAdapter.getList().addAll(introductionModel.getContents());
+                mIntroductionListAdapter.notifyDataSetChanged();
+                mAlertDialog.dismiss();
+            }
+        }
+    };
 
     private IntroductionListFragment() {
     }
 
     @NonNull
-    public static IntroductionListFragment newInstance(@TagType int tag, int topicNum) {
+    public static IntroductionListFragment newInstance(@TagType int tag) {
         IntroductionListFragment fragment = new IntroductionListFragment();
         Bundle args = new Bundle();
         args.putInt("tag", tag);
-        args.putInt("topicNum", topicNum);
         fragment.setArguments(args);
         return fragment;
     }
@@ -48,8 +78,14 @@ public class IntroductionListFragment extends BaseFragment {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             mTag = getArguments().getInt("tag");
-            mTopicNum = getArguments().getInt("topicNum");
         }
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mHandler.removeCallbacksAndMessages(null);
+        mHandler = null;
     }
 
     @Override
@@ -67,6 +103,11 @@ public class IntroductionListFragment extends BaseFragment {
         mRvIntroductionList.addItemDecoration(new SplitLineDecoration(LinearLayoutManager.VERTICAL));
         mIntroductionListAdapter = new IntroductionListAdapter();
         mRvIntroductionList.setAdapter(mIntroductionListAdapter);
+        mIntroductionListAdapter.setIntroductionListCallBack(this);
+        mAlertDialog = new AlertDialog.Builder(getContext())
+                .setCancelable(false)
+                .setView(View.inflate(getContext(), R.layout.layout_loading_dialog, null))
+                .create();
         //配置页面数据
         initPageInfo();
     }
@@ -79,17 +120,13 @@ public class IntroductionListFragment extends BaseFragment {
         switch (mTag) {
             case TAB_FIRST: {
                 mTvIntroductionTitle.setText(getString(R.string.str_tab_first));
-                mTvIntroductionDesc.setText(getString(R.string.str_chapter_topic) + mTopicNum);
-                mIntroductionListAdapter.getList().add("");
-                mIntroductionListAdapter.getList().add("");
-                mIntroductionListAdapter.getList().add("");
-                mIntroductionListAdapter.getList().add("");
-                mIntroductionListAdapter.notifyDataSetChanged();
+                Message message = Message.obtain();
+                message.what = 0;
+                message.getData().putString("fileName", "contents/list/C01.json");
+                mHandler.sendMessageDelayed(message, 100);
             }
             break;
             case TAB_SECOND: {
-                mIntroductionListAdapter.getList().add("");
-                mIntroductionListAdapter.getList().add("");
                 mIntroductionListAdapter.notifyDataSetChanged();
             }
             break;
@@ -97,6 +134,27 @@ public class IntroductionListFragment extends BaseFragment {
             }
             break;
         }
+    }
+
+    /**
+     * 获取列表数据
+     */
+    private IntroductionModel initListData(String fileName) {
+        String json = ReadAssetsFileUtil.readJsonFile(Objects.requireNonNull(getActivity()), fileName);
+        if (!EmptyUtil.isEmpty(json)) {
+            return new Gson().fromJson(json, IntroductionModel.class);
+        }
+        return new IntroductionModel();
+    }
+
+    /**
+     * 列表条目点击事件
+     *
+     * @param itemId 条目Id
+     */
+    @Override
+    public void onItemClick(String itemId) {
+        Toast.makeText(getContext(), itemId, Toast.LENGTH_LONG).show();
     }
 
     /**

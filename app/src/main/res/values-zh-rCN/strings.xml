@@ -4,4 +4,8 @@
     <string name="str_welcome" translatable="false">欢迎</string>
     <string name="str_tab_first" translatable="false">Android 入门</string>
     <string name="str_chapter_topic" translatable="false">本章主题数：</string>
+    <string name="str_loading" translatable="false">加载中...</string>
+    <string name="str_section_tips" translatable="false">本部分有如下子功能供您查看与测试：</string>
+    <string name="str_view_doc" translatable="false">查看文档</string>
+    <string name="str_view_demo" translatable="false">查看演示</string>
 </resources>

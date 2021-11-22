@@ -1,0 +1,19 @@
+{
+  "itemId": "C01-01",
+  "itemName": "基本布局",
+  "introduction": "",
+  "content": [
+    {
+      "title": "线性布局",
+      "docType": "CustomPage",
+      "docPath": "",
+      "demoPath": "LinearLayoutDemoActivity"
+    },
+    {
+      "title": "相对布局",
+      "docType": "CustomPage",
+      "docPath": "",
+      "demoPath": "RelativeLayoutDemoActivity"
+    }
+  ]
+}
