@@ -40,8 +40,10 @@ public abstract class BaseDemoActivity extends AppCompatActivity {
             setContentView(initViewRes());
             //设置ActionBar
             ActionBar actionBar = getSupportActionBar();
-            actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setTitle(initPageTitle());
+            if (actionBar != null) {
+                actionBar.setDisplayHomeAsUpEnabled(true);
+                actionBar.setTitle(initPageTitle());
+            }
         } else {
             throw new IllegalArgumentException("参数配置不正确（布局&页面标题）");
         }

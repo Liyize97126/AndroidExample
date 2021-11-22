@@ -80,7 +80,8 @@ public class SplitLineDecoration extends RecyclerView.ItemDecoration {
             left = parent.getPaddingLeft();
             right = parent.getWidth() - parent.getPaddingRight();
         }
-        for (int i = 0; i < parent.getChildCount(); i++) {
+        int childCount = (parent.getChildCount() - 1);
+        for (int i = 0; i < childCount; i++) {
             View child = parent.getChildAt(i);
             RecyclerView.LayoutParams params = (RecyclerView.LayoutParams) child.getLayoutParams();
             int top = child.getBottom() + params.bottomMargin;
@@ -98,7 +99,8 @@ public class SplitLineDecoration extends RecyclerView.ItemDecoration {
     private void drawHorizontalSplitLine(@NonNull Canvas c, @NonNull RecyclerView parent) {
         int top = parent.getPaddingTop();
         int bottom = parent.getHeight() - parent.getPaddingBottom();
-        for (int i = 0; i < parent.getChildCount(); i++) {
+        int childCount = (parent.getChildCount() - 1);
+        for (int i = 0; i < childCount; i++) {
             View child = parent.getChildAt(i);
             RecyclerView.LayoutParams params = (RecyclerView.LayoutParams) child.getLayoutParams();
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {

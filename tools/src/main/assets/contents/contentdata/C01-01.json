@@ -7,13 +7,13 @@
       "title": "线性布局",
       "docType": "CustomPage",
       "docPath": "",
-      "demoPath": "LinearLayoutDemoActivity"
+      "demoPath": "com.yize.resourcepack01.basiclayout.LinearLayoutDemoActivity"
     },
     {
       "title": "相对布局",
       "docType": "CustomPage",
       "docPath": "",
-      "demoPath": "RelativeLayoutDemoActivity"
+      "demoPath": "com.yize.resourcepack01.basiclayout.RelativeLayoutDemoActivity"
     }
   ]
 }

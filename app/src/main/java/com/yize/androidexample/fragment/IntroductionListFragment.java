@@ -8,7 +8,6 @@ import android.os.Looper;
 import android.os.Message;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.IntDef;
 import androidx.annotation.NonNull;
@@ -16,6 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
+import com.yize.androidexample.DescriptionActivity;
 import com.yize.androidexample.R;
 import com.yize.androidexample.adapter.IntroductionListAdapter;
 import com.yize.androidexample.model.IntroductionModel;
@@ -154,7 +154,7 @@ public class IntroductionListFragment extends BaseFragment implements Introducti
      */
     @Override
     public void onItemClick(String itemId) {
-        Toast.makeText(getContext(), itemId, Toast.LENGTH_LONG).show();
+        DescriptionActivity.start(getActivity(), itemId);
     }
 
     /**

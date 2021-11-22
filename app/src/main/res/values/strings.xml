@@ -8,4 +8,5 @@
     <string name="str_section_tips" translatable="false">This section has the following sub-functions for you to view and test:</string>
     <string name="str_view_doc" translatable="false">View Document</string>
     <string name="str_view_demo" translatable="false">View the Demo</string>
+    <string name="str_topic_details" translatable="false">TopicDetails</string>
 </resources>
