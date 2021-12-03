@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="4"
+    android:orientation="horizontal"
+    android:rowCount="7"
+    tools:context=".basiclayout.GridLayoutDemoActivity">
+
+    <Button
+        android:id="@+id/bt_button_first"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill"
+        android:text="按钮1"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/bt_button_second"
+        android:layout_gravity="fill"
+        android:text="按钮2"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/bt_button_third"
+        android:layout_rowSpan="2"
+        android:layout_gravity="fill"
+        android:text="按钮3"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/bt_button_fourth"
+        android:layout_gravity="fill"
+        android:text="按钮4"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/bt_button_fifth"
+        android:layout_gravity="fill"
+        android:text="按钮5"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/bt_button_sixth"
+        android:layout_rowSpan="2"
+        android:layout_gravity="fill"
+        android:text="按钮6"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/bt_button_seventh"
+        android:layout_row="2"
+        android:layout_column="3"
+        android:layout_gravity="fill"
+        android:text="按钮7"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/bt_button_eighth"
+        android:layout_row="2"
+        android:layout_rowSpan="2"
+        android:layout_column="0"
+        android:layout_gravity="fill"
+        android:text="按钮8"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/bt_button_ninth"
+        android:layout_gravity="fill"
+        android:text="按钮9"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/bt_button_tenth"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill"
+        android:text="按钮10"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/bt_button_eleventh"
+        android:layout_gravity="fill"
+        android:text="按钮11"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/bt_button_twelfth"
+        android:layout_gravity="fill"
+        android:text="按钮12"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/bt_button_thirteenth"
+        android:layout_rowSpan="2"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill"
+        android:text="按钮13"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/bt_button_fourteenth"
+        android:layout_gravity="fill"
+        android:text="按钮14"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/bt_button_fifteenth"
+        android:layout_gravity="fill"
+        android:text="按钮15"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:layout_gravity="fill"
+        android:gravity="center"
+        android:text="@string/str_grid_layout" />
+
+    <TextView
+        android:id="@+id/tv_show_status"
+        android:layout_columnSpan="4"
+        android:layout_gravity="fill"
+        android:background="@color/colorE8FFCD"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/dp_20"
+        android:text="请按下任意按钮"
+        android:textSize="@dimen/sp_22"
+        tools:ignore="HardcodedText" />
+
+</GridLayout>

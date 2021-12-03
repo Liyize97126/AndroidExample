@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.yize.androidexample.R;
 import com.yize.androidexample.model.DescriptionModel;
 import com.yize.tools.base.BaseAdapter;
+import com.yize.tools.utils.EmptyUtil;
 
 /**
  * @Desc: 内容详情页列表适配器
@@ -48,10 +50,16 @@ public class DescriptionListAdapter extends BaseAdapter<DescriptionModel.Content
             holder.mTvDescriptionViewDemo.setTag(contentModel.getDemoPath());
             holder.mTvDescriptionViewDemo.setOnClickListener(v -> {
                 String demoPath = (String) v.getTag();
-                try {
-                    mDescriptionListCallBack.onViewDemoClick(Class.forName(demoPath));
-                } catch (ClassNotFoundException e) {
-                    e.printStackTrace();
+                if (!EmptyUtil.isEmpty(demoPath)) {
+                    try {
+                        mDescriptionListCallBack.onViewDemoClick(Class.forName(demoPath));
+                    } catch (ClassNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                } else {
+                    if (mContext != null) {
+                        Toast.makeText(mContext, mContext.getString(R.string.str_no_example_tips), Toast.LENGTH_LONG).show();
+                    }
                 }
             });
         }

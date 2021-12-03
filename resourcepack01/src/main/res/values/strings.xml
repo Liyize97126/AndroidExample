@@ -3,4 +3,10 @@
     <string name="str_linear_layout" translatable="false">LinearLayout  线性布局</string>
     <string name="str_relative_layout_demo_activity_name" translatable="false">RelativeLayoutDemoActivity</string>
     <string name="str_relative_layout" translatable="false">RelativeLayout\n相对布局</string>
+    <string name="str_frame_layout_demo_activity_name" translatable="false">FrameLayoutDemoActivity</string>
+    <string name="str_frame_layout" translatable="false">FrameLayout\n帧布局</string>
+    <string name="str_table_layout_demo_activity_name" translatable="false">TableLayoutDemoActivity</string>
+    <string name="str_table_layout" translatable="false">TableLayout  表格布局</string>
+    <string name="str_grid_layout_demo_activity_name" translatable="false">GridLayoutDemoActivity</string>
+    <string name="str_grid_layout" translatable="false">GridLayout\n网格布局</string>
 </resources>

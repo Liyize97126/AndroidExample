@@ -9,4 +9,5 @@
     <string name="str_view_doc" translatable="false">查看文档</string>
     <string name="str_view_demo" translatable="false">查看演示</string>
     <string name="str_topic_details" translatable="false">主题详情</string>
+    <string name="str_no_example_tips" translatable="false">本部分暂无示例Demo</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.yize.tools.base;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,11 +24,13 @@ public abstract class BaseAdapter<T, VH extends RecyclerView.ViewHolder> extends
      * 集合数据
      */
     private List<T> mList = new ArrayList<>();
+    protected Context mContext;
 
     @NonNull
     @Override
     public final VH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = initResourceIds(LayoutInflater.from(parent.getContext()), parent, viewType);
+        mContext = view.getContext();
         return initCreateViewHolder(view, viewType);
     }
 

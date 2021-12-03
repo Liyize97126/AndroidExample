@@ -3,7 +3,17 @@
     package="com.yize.resourcepack01">
 
     <application>
-        <activity android:name=".basiclayout.RelativeLayoutDemoActivity"
+        <activity
+            android:name=".basiclayout.GridLayoutDemoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".basiclayout.TableLayoutDemoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".basiclayout.FrameLayoutDemoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".basiclayout.RelativeLayoutDemoActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".basiclayout.LinearLayoutDemoActivity"
