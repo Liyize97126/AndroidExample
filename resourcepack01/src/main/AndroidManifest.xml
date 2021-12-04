@@ -4,6 +4,9 @@
 
     <application>
         <activity
+            android:name=".basiccontrols.TextControlsDemoActivity"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".basiclayout.GridLayoutDemoActivity"
             android:screenOrientation="portrait" />
         <activity

@@ -9,4 +9,5 @@
     <string name="str_table_layout" translatable="false">TableLayout  表格布局</string>
     <string name="str_grid_layout_demo_activity_name" translatable="false">GridLayoutDemoActivity</string>
     <string name="str_grid_layout" translatable="false">GridLayout\n网格布局</string>
+    <string name="str_text_controls_demo_activity_name" translatable="false">TextControlsDemoActivity</string>
 </resources>

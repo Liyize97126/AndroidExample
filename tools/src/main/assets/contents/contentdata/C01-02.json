@@ -1,0 +1,19 @@
+{
+  "itemId": "C01-02",
+  "itemName": "基本控件",
+  "introduction": "",
+  "content": [
+    {
+      "title": "文本相关",
+      "docType": "CustomPage",
+      "docPath": "",
+      "demoPath": "com.yize.resourcepack01.basiccontrols.TextControlsDemoActivity"
+    },
+    {
+      "title": "按钮相关",
+      "docType": "CustomPage",
+      "docPath": "",
+      "demoPath": null
+    }
+  ]
+}
