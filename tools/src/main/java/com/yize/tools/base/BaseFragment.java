@@ -8,15 +8,12 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModel;
-import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
 
 /**
- * @Description: 公共Fragment类
- * @Author: YiZe
- * @Date: 2021年10月09日   星期六   16:17
+ * @Desc: 公共Fragment类
+ * @Date: 2021年10月09日
+ * @Time: 16:17
+ * @Author: 李易泽
  */
 public abstract class BaseFragment extends Fragment {
     @Nullable

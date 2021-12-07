@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  开关文本样式  -->
+    <style name="SwitchTextStyle" parent="@android:style/TextAppearance.Small">
+        <item name="android:textColor">@color/colorGray9E9E9E</item>
+    </style>
+
+    <!--  复选框按钮样式一  -->
+    <style name="CheckBoxStyleFirst" parent="Theme.AppCompat.Light">
+        <!--  未选中的颜色  -->
+        <!--<item name="colorControlNormal"></item>-->
+        <!--  选中的颜色  -->
+        <item name="colorControlActivated">@color/colorRed</item>
+    </style>
+
+    <!--  复选框按钮样式二  -->
+    <style name="CheckBoxStyleSecond" parent="Theme.AppCompat.Light">
+        <!--  未选中的颜色  -->
+        <!--<item name="colorControlNormal"></item>-->
+        <!--  选中的颜色  -->
+        <item name="colorControlActivated">@color/colorBlue</item>
+    </style>
+
+    <!--  复选框按钮样式三  -->
+    <style name="CheckBoxStyleThird" parent="Theme.AppCompat.Light">
+        <!--  未选中的颜色  -->
+        <!--<item name="colorControlNormal"></item>-->
+        <!--  选中的颜色  -->
+        <item name="colorControlActivated">@color/colorGreen</item>
+    </style>
+</resources>

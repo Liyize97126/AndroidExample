@@ -10,4 +10,5 @@
     <string name="str_grid_layout_demo_activity_name" translatable="false">GridLayoutDemoActivity</string>
     <string name="str_grid_layout" translatable="false">GridLayout\n网格布局</string>
     <string name="str_text_controls_demo_activity_name" translatable="false">TextControlsDemoActivity</string>
+    <string name="str_button_controls_demo_activity_name" translatable="false">ButtonControlsDemoActivity</string>
 </resources>

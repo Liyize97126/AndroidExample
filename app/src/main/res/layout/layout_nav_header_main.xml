@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cl_top_bg"
     android:layout_width="match_parent"
     android:layout_height="@dimen/dp_200"
-    android:background="@mipmap/img_drawer_top_bg" />
+    android:background="@mipmap/img_autumn_drawer_top_bg" />

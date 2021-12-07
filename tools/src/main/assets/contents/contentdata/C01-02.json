@@ -13,6 +13,30 @@
       "title": "按钮相关",
       "docType": "CustomPage",
       "docPath": "",
+      "demoPath": "com.yize.resourcepack01.basiccontrols.ButtonControlsDemoActivity"
+    },
+    {
+      "title": "内容展示相关",
+      "docType": "CustomPage",
+      "docPath": "",
+      "demoPath": null
+    },
+    {
+      "title": "进度条相关",
+      "docType": "CustomPage",
+      "docPath": "",
+      "demoPath": null
+    },
+    {
+      "title": "列表相关",
+      "docType": "CustomPage",
+      "docPath": "",
+      "demoPath": null
+    },
+    {
+      "title": "弹窗相关",
+      "docType": "CustomPage",
+      "docPath": "",
       "demoPath": null
     }
   ]

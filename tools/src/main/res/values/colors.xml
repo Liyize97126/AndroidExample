@@ -8,6 +8,7 @@
     <color name="colorBlack">#000000</color>
     <color name="colorGray444">#444444</color>
     <color name="colorGray888">#888888</color>
+    <color name="colorGray9E9E9E">#9E9E9E</color>
     <color name="colorGrayDDD">#DDDDDD</color>
     <color name="colorRed">#FF0000</color>
     <color name="colorGreen">#00FF00</color>
