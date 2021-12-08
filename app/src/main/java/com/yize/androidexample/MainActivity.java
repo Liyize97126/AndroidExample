@@ -19,7 +19,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.google.android.material.navigation.NavigationView;
 import com.yize.androidexample.fragment.HomeFragment;
 import com.yize.androidexample.fragment.IntroductionListFragment;
-import com.yize.resourcepack01.basiccontrols.ButtonControlsDemoActivity;
+import com.yize.resourcepack01.pagerelated.WithReturnValueDemoActivity;
 import com.yize.tools.utils.DateUtil;
 
 import java.util.Date;
@@ -146,7 +146,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
      * 测试Activity
      */
     private void testActivity() {
-        startActivity(new Intent(this, ButtonControlsDemoActivity.class));
+        startActivity(new Intent(this, WithReturnValueDemoActivity.class));
         finish();
     }
 

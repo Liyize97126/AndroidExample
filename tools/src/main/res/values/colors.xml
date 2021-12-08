@@ -9,6 +9,7 @@
     <color name="colorGray444">#444444</color>
     <color name="colorGray888">#888888</color>
     <color name="colorGray9E9E9E">#9E9E9E</color>
+    <color name="colorGrayAAA">#AAAAAA</color>
     <color name="colorGrayDDD">#DDDDDD</color>
     <color name="colorRed">#FF0000</color>
     <color name="colorGreen">#00FF00</color>
@@ -19,4 +20,6 @@
     <color name="colorWhite">#FFFFFF</color>
     <color name="color009688">#009688</color>
     <color name="colorE8FFCD">#E8FFCD</color>
+    <color name="colorFADCFF">#FADCFF</color>
+    <color name="color03A9F4">#03A9F4</color>
 </resources>

@@ -4,6 +4,12 @@
 
     <application>
         <activity
+            android:name=".pagerelated.WithReturnValueDemoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".pagerelated.WithValueDemoActivity"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".basiccontrols.ButtonControlsDemoActivity"
             android:screenOrientation="portrait" />
         <activity

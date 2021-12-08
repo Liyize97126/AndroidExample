@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFADCFF"
+    tools:context=".pagerelated.WithReturnValueDemoActivity">
+
+    <EditText
+        android:id="@+id/et_enter_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_50"
+        android:background="@drawable/cyan_corners10_bg_style"
+        android:gravity="center"
+        android:hint="请输入传值内容"
+        android:includeFontPadding="false"
+        android:inputType="text"
+        android:padding="@dimen/dp_15"
+        android:textColor="@color/colorBlack"
+        android:textColorHint="@color/colorGrayAAA"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="Autofill,HardcodedText" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_200"
+        android:layout_marginHorizontal="@dimen/dp_50"
+        android:layout_marginBottom="@dimen/dp_80"
+        android:background="@drawable/c03a9f4_corners20_bg_style"
+        app:layout_constraintBottom_toTopOf="@id/et_enter_value"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_20"
+            android:layout_marginVertical="@dimen/dp_10"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_info_item_first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:includeFontPadding="false"
+                android:text="初始化成功，请操作"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/sp_16"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tv_info_item_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:includeFontPadding="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/sp_16"
+                android:visibility="gone"
+                tools:text="当前页面传出的值：123"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_info_item_third"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:includeFontPadding="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/sp_16"
+                android:visibility="gone"
+                tools:text="当前页面得到的回传值：abc"
+                tools:visibility="visible" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/bt_submit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_80"
+        android:includeFontPadding="false"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:padding="@dimen/dp_30"
+        android:text="传值给下一页面"
+        android:textSize="@dimen/sp_18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_enter_value"
+        tools:ignore="HardcodedText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

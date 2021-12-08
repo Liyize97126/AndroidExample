@@ -1,0 +1,25 @@
+{
+  "itemId": "C01-03",
+  "itemName": "页面相关",
+  "introduction": "",
+  "content": [
+    {
+      "title": "Activity基本知识",
+      "docType": "CustomPage",
+      "docPath": "",
+      "demoPath": null
+    },
+    {
+      "title": "Activity跳转与传值",
+      "docType": "CustomPage",
+      "docPath": "",
+      "demoPath": "com.yize.resourcepack01.pagerelated.WithValueDemoActivity"
+    },
+    {
+      "title": "Activity页面回传值",
+      "docType": "CustomPage",
+      "docPath": "",
+      "demoPath": "com.yize.resourcepack01.pagerelated.WithReturnValueDemoActivity"
+    }
+  ]
+}

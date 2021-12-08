@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFADCFF"
+    tools:context=".pagerelated.WithValueDemoActivity">
+
+    <TextView
+        android:id="@+id/tv_value_by_previous_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="@dimen/dp_10"
+        android:text="上一个页面传回的值：\n#%#"
+        android:textColor="@color/colorGray444"
+        android:textSize="@dimen/sp_20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tv_page_reuse_times"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_50"
+        android:drawableStart="@mipmap/ic_cherry"
+        android:drawableLeft="@mipmap/ic_cherry"
+        android:drawableEnd="@mipmap/ic_cherry"
+        android:drawableRight="@mipmap/ic_cherry"
+        android:drawablePadding="@dimen/dp_8"
+        android:includeFontPadding="false"
+        android:text="当前页面复用次数：#%#"
+        android:textColor="@color/colorGray888"
+        android:textSize="@dimen/sp_18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_value_by_previous_page"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/et_enter_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_50"
+        android:background="@drawable/cyan_corners10_bg_style"
+        android:gravity="center"
+        android:hint="请输入要传给下一个页面的内容"
+        android:includeFontPadding="false"
+        android:inputType="text"
+        android:padding="@dimen/dp_15"
+        android:textColor="@color/colorBlack"
+        android:textColorHint="@color/colorGrayAAA"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6"
+        tools:ignore="Autofill,HardcodedText" />
+
+    <ImageView
+        android:id="@+id/iv_go"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_30"
+        android:src="@mipmap/ic_go"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_enter_value"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
