@@ -1,8 +1,12 @@
 package com.yize.tools.base;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 
+import androidx.annotation.LayoutRes;
+import androidx.annotation.MenuRes;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -33,6 +37,7 @@ public abstract class BaseDemoActivity extends AppCompatActivity {
      *
      * @param savedInstanceState 意外退出保存的数据
      */
+    @SuppressLint("ResourceType")
     private void initActivity(Bundle savedInstanceState) {
         //判断配置
         if (initViewRes() > 0 && !EmptyUtil.isEmpty(initPageTitle())) {
@@ -49,6 +54,22 @@ public abstract class BaseDemoActivity extends AppCompatActivity {
         }
         initView();
         initData();
+    }
+
+    /**
+     * 添加菜单项
+     *
+     * @param menu 放置项目的选项菜单
+     * @return 菜单是否显示（true表示显示，反之不显示）
+     */
+    @SuppressLint("ResourceType")
+    @Override
+    public final boolean onCreateOptionsMenu(Menu menu) {
+        if (initMenuRes() > 0) {
+            getMenuInflater().inflate(initMenuRes(), menu);
+            return true;
+        }
+        return super.onCreateOptionsMenu(menu);
     }
 
     /**
@@ -71,6 +92,7 @@ public abstract class BaseDemoActivity extends AppCompatActivity {
      *
      * @return 当前的布局Id
      */
+    @LayoutRes
     protected abstract int initViewRes();
 
     /**
@@ -79,6 +101,16 @@ public abstract class BaseDemoActivity extends AppCompatActivity {
      * @return 当前的页面标题
      */
     protected abstract String initPageTitle();
+
+    /**
+     * 设置更多选项布局
+     *
+     * @return 更多选项布局Id
+     */
+    @MenuRes
+    protected int initMenuRes() {
+        return 0;
+    }
 
     /**
      * 初始化视图

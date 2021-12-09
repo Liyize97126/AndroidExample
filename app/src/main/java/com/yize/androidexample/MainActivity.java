@@ -19,7 +19,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.google.android.material.navigation.NavigationView;
 import com.yize.androidexample.fragment.HomeFragment;
 import com.yize.androidexample.fragment.IntroductionListFragment;
-import com.yize.resourcepack01.pagerelated.WithReturnValueDemoActivity;
+import com.yize.resourcepack01.basiccontrols.listdemoactivities.ListDemoHomeActivity;
 import com.yize.tools.utils.DateUtil;
 
 import java.util.Date;
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         mFragment = mHomeFragment;
         setTitle(getString(R.string.str_home));
         mFragmentManager.beginTransaction().add(R.id.fl_host_page, mFragment).commit();
-        //testActivity();
+        testActivity();
     }
 
     @Override
@@ -146,7 +146,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
      * 测试Activity
      */
     private void testActivity() {
-        startActivity(new Intent(this, WithReturnValueDemoActivity.class));
+        startActivity(new Intent(this, ListDemoHomeActivity.class));
         finish();
     }
 

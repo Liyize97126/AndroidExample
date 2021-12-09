@@ -3,6 +3,14 @@
     package="com.yize.resourcepack01">
 
     <application>
+        <activity android:name=".basiccontrols.listdemoactivities.UseCustomizeAdapterListDemoActivity"></activity>
+        <activity android:name=".basiccontrols.listdemoactivities.UseArrayAdapterListDemoActivity" />
+        <activity
+            android:name=".basiccontrols.listdemoactivities.BasicListDemoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".basiccontrols.listdemoactivities.ListDemoHomeActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".pagerelated.WithReturnValueDemoActivity"
             android:screenOrientation="portrait" />

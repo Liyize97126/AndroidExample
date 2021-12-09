@@ -13,4 +13,35 @@
     <string name="str_button_controls_demo_activity_name" translatable="false">ButtonControlsDemoActivity</string>
     <string name="str_with_value_demo_activity_name" translatable="false">WithValueDemoActivity</string>
     <string name="str_with_return_value_demo_activity_name" translatable="false">WithReturnValueDemoActivity</string>
+    <string name="str_list_demo_activity_name" translatable="false">ListDemoActivity</string>
+    <string name="str_basic_list_demo_activity_name" translatable="false">BasicListDemoActivity</string>
+    <string name="str_use_array_adapter_list_demo_activity_name" translatable="false">UseArrayAdapterListDemoActivity</string>
+    <string name="str_use_custom_adapter_list_demo_activity_name" translatable="false">UseCustomizeAdapterListDemoActivity</string>
+    <string name="str_list_view" translatable="false">ListView 列表</string>
+    <string name="str_use_array_adapter_list_view" translatable="false">使用ArrayAdapter加载的ListView 列表</string>
+    <string name="str_use_custom_adapter_list_view" translatable="false">使用自定义Adapter加载的ListView 列表</string>
+
+    <string-array name="arr_list_data">
+        <item>谢永强</item>
+        <item>王小蒙</item>
+        <item>王长贵</item>
+        <item>谢大脚</item>
+        <item>谢广坤</item>
+        <item>王老七</item>
+        <item>赵四</item>
+        <item>刘能</item>
+        <item>刘一水</item>
+        <item>谢小梅</item>
+        <item>赵玉田</item>
+        <item>刘英</item>
+        <item>李大国</item>
+        <item>王香秀</item>
+        <item>皮长山</item>
+        <item>谢兰</item>
+        <item>王云</item>
+        <item>王霞</item>
+        <item>王大拿</item>
+        <item>王木生</item>
+        <item>齐三太</item>
+    </string-array>
 </resources>
