@@ -43,4 +43,8 @@ public class ListDemoHomeActivity extends BaseDemoActivity {
     public void useCustomizeAdapterList(View view) {
         UseCustomizeAdapterListDemoActivity.start(this);
     }
+
+    public void useCustomizeAdapterAdvancedList(View view) {
+        UseCustomizeAdapterAdvancedListDemoActivity.start(this);
+    }
 }

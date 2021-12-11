@@ -31,7 +31,7 @@
       "title": "列表相关",
       "docType": "CustomPage",
       "docPath": "",
-      "demoPath": null
+      "demoPath": "com.yize.resourcepack01.basiccontrols.listdemoactivities.ListDemoHomeActivity"
     },
     {
       "title": "弹窗相关",

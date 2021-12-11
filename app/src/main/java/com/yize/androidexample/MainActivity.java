@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         mFragment = mHomeFragment;
         setTitle(getString(R.string.str_home));
         mFragmentManager.beginTransaction().add(R.id.fl_host_page, mFragment).commit();
-        testActivity();
+        //testActivity();
     }
 
     @Override

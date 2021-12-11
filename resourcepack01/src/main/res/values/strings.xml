@@ -17,9 +17,15 @@
     <string name="str_basic_list_demo_activity_name" translatable="false">BasicListDemoActivity</string>
     <string name="str_use_array_adapter_list_demo_activity_name" translatable="false">UseArrayAdapterListDemoActivity</string>
     <string name="str_use_custom_adapter_list_demo_activity_name" translatable="false">UseCustomizeAdapterListDemoActivity</string>
-    <string name="str_list_view" translatable="false">ListView 列表</string>
-    <string name="str_use_array_adapter_list_view" translatable="false">使用ArrayAdapter加载的ListView 列表</string>
-    <string name="str_use_custom_adapter_list_view" translatable="false">使用自定义Adapter加载的ListView 列表</string>
+    <string name="str_use_custom_adapter_advanced_list_demo_activity_name" translatable="false">
+        UseCustomizeAdapterAdvancedListDemoActivity
+    </string>
+    <string name="str_list_view" translatable="false">ListView列表</string>
+    <string name="str_use_array_adapter_list_view" translatable="false">使用ArrayAdapter加载的ListView列表</string>
+    <string name="str_use_custom_adapter_list_view" translatable="false">使用自定义Adapter加载的ListView列表</string>
+    <string name="str_use_custom_adapter_advanced_list_view" translatable="false">
+        使用自定义Adapter(进阶版)加载数据的列表演示页
+    </string>
 
     <string-array name="arr_list_data">
         <item>谢永强</item>
