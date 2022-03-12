@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
@@ -15,5 +15,17 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="TipsText">
+        <item name="android:drawableStart">@mipmap/ic_item_tips</item>
+        <item name="android:drawableLeft">@mipmap/ic_item_tips</item>
+        <item name="android:drawablePadding">@dimen/dp_8</item>
+        <item name="android:textColor">@color/colorGray444</item>
+        <item name="android:textSize">@dimen/sp_20</item>
+    </style>
+
+    <style name="MyProgressBar">
+        <item name="android:indeterminateTint" tools:targetApi="lollipop">@color/colorPurple</item>
+    </style>
 
 </resources>

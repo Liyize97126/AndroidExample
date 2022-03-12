@@ -1,4 +1,4 @@
-package com.yize.resourcepack01.basiccontrols.listdemoactivities;
+package com.yize.resourcepack01.basiccontrols.listdemoactivities.basiclistdemos;
 
 import android.app.Activity;
 import android.content.Intent;

@@ -67,6 +67,14 @@
             android:textSize="@dimen/sp_16"
             tools:ignore="HardcodedText" />
 
+        <AutoCompleteTextView
+            android:id="@+id/atv_auto_complete_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:hint="请输入《乡村爱情》人物"
+            tools:ignore="HardcodedText" />
+
         <TextView
             android:id="@+id/tv_text_show"
             android:layout_width="match_parent"
@@ -97,8 +105,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.2"
-                android:text="Go"
                 android:onClick="submit"
+                android:text="Go"
                 tools:ignore="HardcodedText" />
 
         </LinearLayout>

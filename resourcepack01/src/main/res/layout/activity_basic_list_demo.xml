@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorD5F2FF"
-    tools:context=".basiccontrols.listdemoactivities.BasicListDemoActivity">
+    tools:context=".basiccontrols.listdemoactivities.basiclistdemos.BasicListDemoActivity">
 
     <TextView
         android:id="@+id/tv_title"

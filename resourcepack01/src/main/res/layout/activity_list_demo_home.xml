@@ -13,76 +13,68 @@
         android:layout_marginHorizontal="@dimen/dp_20"
         android:orientation="vertical">
 
-        <Button
+        <com.yize.tools.widget.CherryButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp_20"
-            android:drawableStart="@mipmap/ic_cherry"
-            android:drawableLeft="@mipmap/ic_cherry"
-            android:drawableEnd="@mipmap/ic_cherry"
-            android:drawableRight="@mipmap/ic_cherry"
-            android:includeFontPadding="false"
-            android:minWidth="0dp"
-            android:minHeight="0dp"
             android:onClick="basicList"
-            android:padding="@dimen/dp_20"
             android:text="基本ListView列表"
-            android:textAllCaps="false"
-            android:textSize="@dimen/sp_18"
             tools:ignore="HardcodedText" />
 
-        <Button
+        <com.yize.tools.widget.CherryButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp_20"
-            android:drawableStart="@mipmap/ic_cherry"
-            android:drawableLeft="@mipmap/ic_cherry"
-            android:drawableEnd="@mipmap/ic_cherry"
-            android:drawableRight="@mipmap/ic_cherry"
-            android:includeFontPadding="false"
-            android:minWidth="0dp"
-            android:minHeight="0dp"
             android:onClick="useArrayAdapterList"
-            android:padding="@dimen/dp_20"
             android:text="使用ArrayAdapter加载的列表"
-            android:textAllCaps="false"
-            android:textSize="@dimen/sp_18"
             tools:ignore="HardcodedText" />
 
-        <Button
+        <com.yize.tools.widget.CherryButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp_20"
-            android:drawableStart="@mipmap/ic_cherry"
-            android:drawableLeft="@mipmap/ic_cherry"
-            android:drawableEnd="@mipmap/ic_cherry"
-            android:drawableRight="@mipmap/ic_cherry"
-            android:includeFontPadding="false"
-            android:minWidth="0dp"
-            android:minHeight="0dp"
             android:onClick="useCustomizeAdapterList"
-            android:padding="@dimen/dp_20"
             android:text="自定义Adapter加载的列表"
-            android:textAllCaps="false"
-            android:textSize="@dimen/sp_18"
             tools:ignore="HardcodedText" />
 
-        <Button
+        <com.yize.tools.widget.CherryButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp_20"
-            android:drawableStart="@mipmap/ic_cherry"
-            android:drawableLeft="@mipmap/ic_cherry"
-            android:drawableEnd="@mipmap/ic_cherry"
-            android:drawableRight="@mipmap/ic_cherry"
-            android:includeFontPadding="false"
-            android:minWidth="0dp"
-            android:minHeight="0dp"
             android:onClick="useCustomizeAdapterAdvancedList"
-            android:padding="@dimen/dp_20"
             android:text="自定义Adapter加载的列表（进阶版）"
-            android:textAllCaps="false"
-            android:textSize="@dimen/sp_18"
+            tools:ignore="HardcodedText" />
+
+        <com.yize.tools.widget.CherryButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:onClick="basicGridList"
+            android:text="基本GridView列表"
+            tools:ignore="HardcodedText" />
+
+        <com.yize.tools.widget.CherryButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:onClick="expandableList"
+            android:text="ExpandableListView二级列表"
+            tools:ignore="HardcodedText" />
+
+        <com.yize.tools.widget.CherryButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:onClick="spinnerList"
+            android:text="Spinner下拉列表"
+            tools:ignore="HardcodedText" />
+
+        <com.yize.tools.widget.CherryButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:onClick="galleryList"
+            android:text="Gallery画廊"
             tools:ignore="HardcodedText" />
 
         <View

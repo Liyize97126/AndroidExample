@@ -4,16 +4,31 @@
 
     <application>
         <activity
-            android:name=".basiccontrols.listdemoactivities.UseCustomizeAdapterAdvancedListDemoActivity"
+            android:name=".basiccontrols.PopupWindowDemoActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".basiccontrols.listdemoactivities.UseCustomizeAdapterListDemoActivity"
+            android:name=".basiccontrols.ProgressDemoActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".basiccontrols.listdemoactivities.UseArrayAdapterListDemoActivity"
+            android:name=".basiccontrols.listdemoactivities.ExpandableListDemoActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".basiccontrols.listdemoactivities.BasicListDemoActivity"
+            android:name=".basiccontrols.listdemoactivities.SpinnerListDemoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".basiccontrols.listdemoactivities.BasicGridListDemoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".basiccontrols.listdemoactivities.basiclistdemos.UseCustomizeAdapterAdvancedListDemoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".basiccontrols.listdemoactivities.basiclistdemos.UseCustomizeAdapterListDemoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".basiccontrols.listdemoactivities.basiclistdemos.UseArrayAdapterListDemoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".basiccontrols.listdemoactivities.basiclistdemos.BasicListDemoActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".basiccontrols.listdemoactivities.ListDemoHomeActivity"

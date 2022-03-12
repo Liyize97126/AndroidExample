@@ -25,7 +25,7 @@
       "title": "进度条相关",
       "docType": "CustomPage",
       "docPath": "",
-      "demoPath": null
+      "demoPath": "com.yize.resourcepack01.basiccontrols.ProgressDemoActivity"
     },
     {
       "title": "列表相关",
@@ -37,7 +37,7 @@
       "title": "弹窗相关",
       "docType": "CustomPage",
       "docPath": "",
-      "demoPath": null
+      "demoPath": "com.yize.resourcepack01.basiccontrols.PopupWindowDemoActivity"
     }
   ]
 }

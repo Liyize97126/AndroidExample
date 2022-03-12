@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".basiccontrols.PopupWindowDemoActivity">
+
+    <ScrollView
+        android:id="@+id/sv_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_15">
+
+            <TextView
+                style="@style/TipsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Toast（吐司）"
+                tools:ignore="HardcodedText" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10">
+
+                <TableRow android:gravity="center_vertical">
+
+                    <Button
+                        android:layout_height="@dimen/dp_60"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:layout_weight="1"
+                        android:onClick="basicToast"
+                        android:text="最基本的Toast"
+                        android:textAllCaps="false"
+                        tools:ignore="ButtonStyle,HardcodedText" />
+
+                    <Button
+                        android:layout_height="@dimen/dp_60"
+                        android:layout_marginStart="@dimen/dp_5"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:layout_weight="1"
+                        android:onClick="centeredToast"
+                        android:text="居中显示的Toast"
+                        android:textAllCaps="false"
+                        tools:ignore="ButtonStyle,HardcodedText" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:gravity="center_vertical">
+
+                    <Button
+                        android:layout_height="@dimen/dp_60"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:layout_weight="1"
+                        android:onClick="randomLocationToast"
+                        android:text="随机位置的Toast"
+                        android:textAllCaps="false"
+                        tools:ignore="ButtonStyle,HardcodedText" />
+
+                    <Button
+                        android:layout_height="@dimen/dp_60"
+                        android:layout_marginStart="@dimen/dp_5"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:layout_weight="1"
+                        android:onClick="longTimeShowToast"
+                        android:text="长时间显示的Toast"
+                        android:textAllCaps="false"
+                        tools:ignore="ButtonStyle,HardcodedText" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:gravity="center_vertical">
+
+                    <Button
+                        android:layout_height="@dimen/dp_60"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:layout_weight="1"
+                        android:onClick="includeImageToast"
+                        android:text="包含图片的Toast"
+                        android:textAllCaps="false"
+                        tools:ignore="ButtonStyle,HardcodedText" />
+
+                    <Button
+                        android:layout_height="@dimen/dp_60"
+                        android:layout_marginStart="@dimen/dp_5"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:layout_weight="1"
+                        android:onClick="customizeToast"
+                        android:text="完全自定义的Toast"
+                        android:textAllCaps="false"
+                        tools:ignore="ButtonStyle,HardcodedText" />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <TextView
+                style="@style/TipsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+                android:text="Dialog"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_60"
+                    android:layout_marginEnd="@dimen/dp_5"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:layout_weight="1"
+                    android:onClick="basicDialogFirst"
+                    android:text="最基本的Dialog 1"
+                    android:textAllCaps="false"
+                    tools:ignore="ButtonStyle,HardcodedText" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_60"
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:layout_weight="1"
+                    android:onClick="basicDialogSecond"
+                    android:text="最基本的Dialog 2"
+                    android:textAllCaps="false"
+                    tools:ignore="ButtonStyle,HardcodedText" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/TipsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+                android:text="AlertDialog"
+                tools:ignore="HardcodedText" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10">
+
+                <TableRow android:gravity="center_vertical">
+
+                    <Button
+                        android:layout_height="@dimen/dp_60"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:layout_weight="1"
+                        android:onClick="basicAlertDialog"
+                        android:text="最基本的AlertDialog"
+                        android:textAllCaps="false"
+                        tools:ignore="ButtonStyle,HardcodedText" />
+
+                    <Button
+                        android:layout_height="@dimen/dp_60"
+                        android:layout_marginStart="@dimen/dp_5"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:layout_weight="1"
+                        android:onClick="withTitleAlertDialog"
+                        android:text="带标题的AlertDialog"
+                        android:textAllCaps="false"
+                        tools:ignore="ButtonStyle,HardcodedText" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:gravity="center_vertical">
+
+                    <Button
+                        android:layout_height="@dimen/dp_60"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:layout_weight="1"
+                        android:onClick="withButtonAlertDialog"
+                        android:text="带按钮的AlertDialog"
+                        android:textAllCaps="false"
+                        tools:ignore="ButtonStyle,HardcodedText" />
+
+                    <Button
+                        android:layout_height="@dimen/dp_60"
+                        android:layout_marginStart="@dimen/dp_5"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:layout_weight="1"
+                        android:onClick="withDoubleButtonsAlertDialog"
+                        android:text="带两个按钮的AlertDialog"
+                        android:textAllCaps="false"
+                        tools:ignore="ButtonStyle,HardcodedText" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:gravity="center_vertical">
+
+                    <Button
+                        android:layout_height="@dimen/dp_60"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:layout_weight="1"
+                        android:onClick="withThreeButtonsAlertDialog"
+                        android:text="带三个按钮的AlertDialog"
+                        android:textAllCaps="false"
+                        tools:ignore="ButtonStyle,HardcodedText" />
+
+                    <Button
+                        android:layout_height="@dimen/dp_60"
+                        android:layout_marginStart="@dimen/dp_5"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:layout_weight="1"
+                        android:onClick="customPageAlertDialog"
+                        android:text="自定义页面的AlertDialog"
+                        android:textAllCaps="false"
+                        tools:ignore="ButtonStyle,HardcodedText" />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <TextView
+                style="@style/TipsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+                android:text="ProgressDialog"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_60"
+                android:layout_marginTop="@dimen/dp_10"
+                android:onClick="basicProgressDialog"
+                android:text="基本ProgressDialog(静态方法加载)"
+                android:textAllCaps="false"
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_60"
+                android:layout_marginTop="@dimen/dp_10"
+                android:onClick="detailedProgressDialogFirst"
+                android:text="基本ProgressDialog(可配置式1)"
+                android:textAllCaps="false"
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_60"
+                android:layout_marginTop="@dimen/dp_10"
+                android:onClick="detailedProgressDialogSecond"
+                android:text="基本ProgressDialog(可配置式2)"
+                android:textAllCaps="false"
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <TextView
+                style="@style/TipsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+                android:text="PopupWindow"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_60"
+                android:layout_marginTop="@dimen/dp_10"
+                android:onClick="textPopupWindow"
+                android:text="PopupWindow测试页"
+                android:textAllCaps="false"
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_100"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_60"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_weight="1"
+                android:text="左菜单"
+                android:onClick="leftPopupWindow"
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_60"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_weight="1"
+                android:text="右菜单"
+                android:onClick="rightPopupWindow"
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:layout_marginHorizontal="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_50"
+            android:text="下方浮动菜单"
+            android:onClick="bottomPopupWindow"
+            tools:ignore="ButtonStyle,HardcodedText" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:layout_marginHorizontal="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_50"
+            android:text="返               回"
+            android:onClick="back"
+            tools:ignore="ButtonStyle,HardcodedText" />
+
+    </LinearLayout>
+
+</RelativeLayout>

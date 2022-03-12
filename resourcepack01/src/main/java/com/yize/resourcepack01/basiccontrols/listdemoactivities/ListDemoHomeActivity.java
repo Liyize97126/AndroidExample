@@ -3,6 +3,10 @@ package com.yize.resourcepack01.basiccontrols.listdemoactivities;
 import android.view.View;
 
 import com.yize.resourcepack01.R;
+import com.yize.resourcepack01.basiccontrols.listdemoactivities.basiclistdemos.BasicListDemoActivity;
+import com.yize.resourcepack01.basiccontrols.listdemoactivities.basiclistdemos.UseArrayAdapterListDemoActivity;
+import com.yize.resourcepack01.basiccontrols.listdemoactivities.basiclistdemos.UseCustomizeAdapterAdvancedListDemoActivity;
+import com.yize.resourcepack01.basiccontrols.listdemoactivities.basiclistdemos.UseCustomizeAdapterListDemoActivity;
 import com.yize.tools.base.BaseDemoActivity;
 
 /**
@@ -46,5 +50,20 @@ public class ListDemoHomeActivity extends BaseDemoActivity {
 
     public void useCustomizeAdapterAdvancedList(View view) {
         UseCustomizeAdapterAdvancedListDemoActivity.start(this);
+    }
+
+    public void basicGridList(View view) {
+        BasicGridListDemoActivity.start(this);
+    }
+
+    public void expandableList(View view) {
+        ExpandableListDemoActivity.start(this);
+    }
+
+    public void spinnerList(View view) {
+        SpinnerListDemoActivity.start(this);
+    }
+
+    public void galleryList(View view) {
     }
 }

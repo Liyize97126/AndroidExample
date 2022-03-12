@@ -20,12 +20,18 @@
     <string name="str_use_custom_adapter_advanced_list_demo_activity_name" translatable="false">
         UseCustomizeAdapterAdvancedListDemoActivity
     </string>
+    <string name="str_basic_grid_list_demo_activity_name" translatable="false">BasicGridListDemoActivity</string>
+    <string name="str_expandable_list_demo_activity_name" translatable="false">ExpandableListDemoActivity</string>
+    <string name="str_spinner_list_demo_activity_name" translatable="false">SpinnerListDemoActivity</string>
+    <string name="str_progress_demo_activity_name" translatable="false">ProgressDemoActivity</string>
+    <string name="str_popup_window_demo_activity_name" translatable="false">PopupWindowDemoActivity</string>
     <string name="str_list_view" translatable="false">ListView列表</string>
     <string name="str_use_array_adapter_list_view" translatable="false">使用ArrayAdapter加载的ListView列表</string>
     <string name="str_use_custom_adapter_list_view" translatable="false">使用自定义Adapter加载的ListView列表</string>
     <string name="str_use_custom_adapter_advanced_list_view" translatable="false">
         使用自定义Adapter(进阶版)加载数据的列表演示页
     </string>
+    <string name="str_grid_list_view" translatable="false">GridView列表</string>
 
     <string-array name="arr_list_data">
         <item>谢永强</item>
@@ -49,5 +55,67 @@
         <item>王大拿</item>
         <item>王木生</item>
         <item>齐三太</item>
+    </string-array>
+
+    <string-array name="arr_moer_place_moer_castle">
+        <item>请选择</item>
+        <item>洛克</item>
+        <item>尼克</item>
+        <item>杰西</item>
+    </string-array>
+
+    <string-array name="arr_moer_place_love_street">
+        <item>请选择</item>
+        <item>克劳</item>
+        <item>弗礼德</item>
+        <item>琦琦</item>
+        <item>艾尔</item>
+        <item>艾米</item>
+        <item>大力</item>
+        <item>汤米</item>
+    </string-array>
+
+    <string-array name="arr_moer_place_tao_tao_le_street">
+        <item>请选择</item>
+        <item>丝尔特</item>
+        <item>埃里克斯</item>
+        <item>彩虹</item>
+        <item>花婶</item>
+    </string-array>
+
+    <string-array name="arr_moer_place_sunshine_ranch">
+        <item>请选择</item>
+        <item>尤尤</item>
+    </string-array>
+
+    <string-array name="arr_moer_place_happy_farm">
+        <item>请选择</item>
+        <item>梅森</item>
+    </string-array>
+
+    <string-array name="arr_moer_place_sunshine_beach">
+        <item>请选择</item>
+        <item>菩提</item>
+    </string-array>
+
+    <string-array name="arr_moer_place_moer_raya_snow_mountain">
+        <item>请选择</item>
+        <item>茜茜</item>
+        <item>凯文</item>
+        <item>贝琪</item>
+    </string-array>
+
+    <string-array name="arr_moer_place_berry_jungle">
+        <item>请选择</item>
+    </string-array>
+
+    <string-array name="arr_moer_place_outpost">
+        <item>请选择</item>
+        <item>瑞琪</item>
+    </string-array>
+
+    <string-array name="arr_moer_place_museum_island">
+        <item>请选择</item>
+        <item>雾冬</item>
     </string-array>
 </resources>

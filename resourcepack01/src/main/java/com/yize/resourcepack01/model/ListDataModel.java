@@ -14,6 +14,11 @@ public class ListDataModel {
     public ListDataModel() {
     }
 
+    public ListDataModel(int image, String name) {
+        this.image = image;
+        this.name = name;
+    }
+
     public ListDataModel(int image, String name, String desc) {
         this.image = image;
         this.name = name;
