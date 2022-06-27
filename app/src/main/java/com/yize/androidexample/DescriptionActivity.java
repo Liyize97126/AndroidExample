@@ -100,4 +100,9 @@ public class DescriptionActivity extends AppCompatActivity implements Descriptio
     public void onViewDemoClick(Class<?> startClass) {
         startActivity(new Intent(DescriptionActivity.this, startClass));
     }
+
+    @Override
+    public void onViewDocClick(String path) {
+        Toast.makeText(this, "即将开发，敬请期待！", Toast.LENGTH_LONG).show();
+    }
 }

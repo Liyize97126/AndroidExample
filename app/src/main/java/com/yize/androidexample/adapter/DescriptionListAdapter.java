@@ -47,6 +47,7 @@ public class DescriptionListAdapter extends BaseAdapter<DescriptionModel.Content
         DescriptionModel.ContentModel contentModel = getList().get(position);
         holder.mTvDescriptionTitle.setText(contentModel.getTitle());
         if (mDescriptionListCallBack != null) {
+            holder.mTvDescriptionViewDoc.setOnClickListener(v -> mDescriptionListCallBack.onViewDocClick(""));
             holder.mTvDescriptionViewDemo.setTag(contentModel.getDemoPath());
             holder.mTvDescriptionViewDemo.setOnClickListener(v -> {
                 String demoPath = (String) v.getTag();

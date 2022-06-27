@@ -10,4 +10,35 @@
     <string name="str_view_demo" translatable="false">View the Demo</string>
     <string name="str_topic_details" translatable="false">TopicDetails</string>
     <string name="str_no_example_tips" translatable="false">There is no sample Demo in this part</string>
+
+
+    <string name="str_welcome_desc_first" translatable="false">\u3000\u3000非常感谢您下载并安装了这个示例项目。</string>
+    <string name="str_welcome_desc_second" translatable="false">
+        \u3000\u3000这个示例项目将Android所有相关的技术整合在一起，从最初的基本控件到Android高级功能再到部分优秀的第三方开源框架，都有相关的介绍和可参考的小实例，供开发者进行学习研究。
+    </string>
+    <string name="str_welcome_desc_third" translatable="false">
+        \u3000\u3000本项目由易到难划分了几个大的板块，可点击左上方菜单键或者从屏幕左边往右边滑动即可查阅，当前版本已上架了Android入门板块，后续板块将在未来版本进行更新，敬请期待。
+    </string>
+    <string name="str_welcome_desc_fourth" translatable="false">
+        \u3000\u3000现在，就请允许我在这里介绍一下每个板块所包含的内容：
+    </string>
+    <string name="str_welcome_desc_fourth_a" translatable="false">【目前已发布的板块】</string>
+    <string name="str_welcome_desc_fourth_b" translatable="false">\u3000\u3000Android 入门：</string>
+    <string name="str_welcome_desc_fourth_c" translatable="false">
+        \u3000\u3000本部分从基本布局、基本控件开始，一步步介绍Android的基本核心知识，想研究Android必须要掌握的核心基础，没有它们，你不知道该如何开始......
+    </string>
+    <string name="str_welcome_desc_fourth_d" translatable="false">【即将发布的板块】</string>
+    <string name="str_welcome_desc_fourth_e" translatable="false">\u3000\u3000Android 高级编程</string>
+    <string name="str_welcome_desc_fourth_f" translatable="false">\u3000\u3000更多内容，敬请期待......</string>
+    <string name="str_welcome_desc_fifth" translatable="false">
+        \u3000\u3000最后，希望本项目能够引导想要学习Android开发的朋友们，让大家更快速的学会Android开发。由于技术更新很快，本人在此建议不要依赖本软件去学习这项技术，毕竟知识面有限，想要学好这项技术还需要自行查找其他资料，有条件的还可以找一家培训机构去学习，跟着大神来，起码不会走过多的弯路。本项目所有内容均可参考，更多的还需要自行实践，这样才可以得到事半功倍的效果。
+    </string>
+    <string name="str_welcome_desc_sixth" translatable="false">
+        \u3000\u3000由于本人精力、水平有限，项目当中难免会有错误和纰漏，还希望大家来进行指点与纠错，我会尽快去修改，同时，本项目在GitHub完全开源，您也可以贡献自己的代码，后续我会对此进行记录，对项目有突出贡献者，将会按照贡献程度进行适当的奖励，让我们一同努力，共同构建一个和谐的Android学习平台。
+    </string>
+    <string name="str_welcome_desc_seventh" translatable="false">【关于本项目】</string>
+    <string name="str_welcome_desc_seventh_a" translatable="false">当前版本：#%#</string>
+    <string name="str_welcome_desc_seventh_b" translatable="false">作者：Liyize97126</string>
+    <string name="str_welcome_desc_seventh_c" translatable="false">项目GitHub地址：https://github.com/Liyize97126/AndroidExample</string>
+    <string name="str_jump_project_by_github" translatable="false">跳转访问本项目GitHub</string>
 </resources>

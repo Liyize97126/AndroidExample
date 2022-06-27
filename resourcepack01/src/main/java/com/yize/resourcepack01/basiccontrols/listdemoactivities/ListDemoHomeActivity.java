@@ -1,6 +1,7 @@
 package com.yize.resourcepack01.basiccontrols.listdemoactivities;
 
 import android.view.View;
+import android.widget.Toast;
 
 import com.yize.resourcepack01.R;
 import com.yize.resourcepack01.basiccontrols.listdemoactivities.basiclistdemos.BasicListDemoActivity;
@@ -65,5 +66,6 @@ public class ListDemoHomeActivity extends BaseDemoActivity {
     }
 
     public void galleryList(View view) {
+        Toast.makeText(this, "即将开发，敬请期待！", Toast.LENGTH_LONG).show();
     }
 }

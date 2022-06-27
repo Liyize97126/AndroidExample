@@ -69,10 +69,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onStart();
         //处理标题图片
         int month = getNowMonth();
-        if (month == 12 || month == 1 || month == 2) {
-            mClTopBg.setBackgroundResource(R.mipmap.img_winter_drawer_top_bg);
-        } else {
+        if (month == 3 || month == 4 || month == 5) {
+            mClTopBg.setBackgroundResource(R.mipmap.img_spring_drawer_top_bg);
+        } else if (month == 6 || month == 7 || month == 8) {
+            mClTopBg.setBackgroundResource(R.mipmap.img_summer_drawer_top_bg);
+        } else if (month == 9 || month == 10 || month == 11) {
             mClTopBg.setBackgroundResource(R.mipmap.img_autumn_drawer_top_bg);
+        } else {
+            mClTopBg.setBackgroundResource(R.mipmap.img_winter_drawer_top_bg);
         }
     }
 
